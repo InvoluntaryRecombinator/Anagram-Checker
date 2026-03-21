@@ -1,0 +1,67 @@
+<div id="terminal-container">
+  <div class="header">
+    <h1> ∞ THE (IN)VOLUNTARY RECOMBINATOR ∞ </h1> 
+      <br>
+      <h2><u><i>Anagram Sequence Analyzer v1.0</i></u></h2>
+    <div id="infinity"></div>
+  </div>
+<br><br><br>
+  <div class="about-section">
+    
+    <details>
+      <summary>WHAT IS THIS TERMINAL USED FOR?</summary>
+      <p>The Involuntary Recombinator is an anagram sequence analyzing tool that is meant to aid in discovering, developing, and checking the accuracy of simple and complex anagrams. The words and phrases you use here may not want to be disassembled and put back together anew... <br><br> but with the aid of this tool [and your prime intellect] their eventual recombination is all but inevtiable! </p>
+    </details>
+    <br>
+    
+    <details>
+      <summary>HOW DO I USE THIS TOOL?</summary>
+      <p>Input a "seed phrase" into the initial field, and your attempted anagram in the field below it. The tool will check the two phrases and isolate which letters are left over, and which do not match. You can use the leftover letters to structure new words and complete the anagram.</p>
+      <p>For instance, the phrase "the sacred soul is eternal" is a complex item to make an anagram for. However, looking at the available letters, we can extract a few words like "a", "sad", "lost", and "cult".</p>
+      <p>If we wanted to make a grammatically significant anagram, we could start with what we have extracted to form a partial sequence: "a sad lost cult". <br><br>By inputting this into the second field, the analyzer will tell us that the letters <br>[ h, e, r, e, i, s, e, e, r, n ] <br>are still left over. Can you figure out a way to use those remaining 10 letters to finish the sentence?</p>
+    </details>
+    <br>
+
+    <details>
+      <summary>HOW DOES THE TOOL WORK?</summary>
+      <p>This tool works very much like how you would do this yourself with a pen and paper, but it automates the tedious parts. If you were doing this by hand, you would have to write out the initial phrase and the attempted anagram, crossing off letters individually to see what was left over. Every time you came up with a new attempt, you would have to rewrite everything and repeat the process. When it comes to making anagrams that are 20+ letters long across multiple words, this becomes a particularly mentally taxing and slow process.</p>
+      <p>This analyzer streamlines that by taking your seed phrase and attempt, placing the letters from each into their own "buckets", and then running through them to check off each character one by one. Depending on what doesn't add up at the end, the tool then prints a simple notice letting you know if there are too many letters, not enough letters, or a complete mismatch- all to help you in your journey of creating complex and thematically rich anagrams.</p>
+    </details>
+    <br>
+
+    <details>
+      <summary>WHY WAS THIS ENGINEERED?</summary>
+      <p>I created this tool to help me find anagrams for a sci-fi novel I have toyed with writing. The story's working title is "The (In)voluntary Recombinator" and it heavily involves the recombination of words, letters, and matter as part of its broader narrative.</p>
+      <p>Initially, I used LLMs (Large Language Models) to try and help me develop complex anagrams. I had several strong 'aha' moments while doing this that fueled my creative juices, only to find out later that what the AI had repeatedly assured me were perfect anagrams, were actually off by a couple of letters. Even advanced models like GPT 5.2 and Gemini on their highest resoning settings would gaslight me by hyping up my supposed literary genius and anagram creation abilities... but the phrases we came up with together were often complete rubbish once I checked them by hand! <br><br>I had phrases that I thought matched perfectly for weeks, only to find out that they were one or two letters off and near impossible for me to fix in a way that still created a strong anagram with similar thematic presence.</p>
+      <p>After doing some testing and research, I learned that this exact type of task (counting all the characters in a sequence and verifying their presence in another) is something LLMs are inherently terrible at. This is partly due to "tokenization" where the AI breaks words down into chunks rather than individual letters, making it terrible at storing and comparing single characters in isolation. While AI is an extremely useful tool for many things, it is much more effective and accurate to use a simple, deterministic program like the one on this page for strict character validation.</p>
+    </details>
+    <br>
+
+    <details>
+      <summary>WHAT IS "THE (IN)VOLUNTARY RECOMBINATOR" ABOUT?</summary>
+      <p>It is still a work in progress with more lore than narrative at this point... But in the distant future of our universe, the Voluntary Recombinator is a spiritual Mecca of unknown origin where many alien species gather for spiritual growth. The Recombinator is a massive structure able to disassemble, combine, splice, and restructure matter and information at its most fundamental levels. Aliens of all races from all across the universe visit and revere this interstellar strucutre</p>
+      <p>In the present day, beings voluntarily submit themselves to the Recombinator for spiritual reasons and all sorts of strange rituals—such as combining with the body and soul of dying loved ones rather than letting them pass away separately, or merging unalike species for a variety of reasons.</p>
+      <p>However, as the spiritual hub undergoes deeper scrutiny, a group of individuals begins to realize it has mysterious and daunting origins. There may very well be a connection between this new spiritual Mecca and an unstoppable, ancient superstructure that once wreaked havoc on the universe by ingesting entire galaxies and combining them without consent. This superstructure, known as the VRN ROBOTIC UNITER ANOMALY (VRN standing for 'Virtual Reality Network') dissapeared one day as mysteriously as it arrived after wreaking immense havoc on the greater universe, and has long been a deeply unsettling mystery to all those that have heard of the legend.</p>
+      <p>Perhaps there is more than meets the eye between these two mysterious entities? Take the phrase "THE INVOLUNTARY RECOMBINATOR" and the ancient machine known as the "VRN ROBOTIC UNITER ANOMALY". Run them through this analyzer, and you may realize that these two disparate entities are far more connected than the universe ever thought!</p>
+    </details>
+
+  </div>
+  <br><br>
+
+  <div class="input-section">
+    <label>> INPUT SEED PHRASE:</label>
+    <input type="text" id="phrase1" placeholder="Enter target...">
+    
+    <br><br><br>
+    
+    <label>> INPUT ANAGRAM ATTEMPT:</label>
+    <input type="text" id="phrase2" placeholder="Enter attempt...">
+    
+    <br><br>
+    <button id="run-btn">INITIATE ANALYSIS</button>
+  </div>
+
+  <div id="output-area">
+    <p>> AWAITING INPUT...</p>
+  </div>
+</div>
