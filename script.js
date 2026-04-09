@@ -1,22 +1,22 @@
-// grab the button
 let runButton = document.getElementById("run-btn");
 
-// listen for click
-runButton.addEventListener("click", function() {
-  
-  // 1. get the text from inputs
+runButton.addEventListener("click", analyzeAnagram);
+
+  // anagram comparison function
+  function analyzeAnagram() {
+    
   let phrase1 = document.getElementById("phrase1").value;
   let phrase2 = document.getElementById("phrase2").value;
 
-  // 2. clean the text (lowercase and no spaces)
+  // clean up the text 
   let clean1 = phrase1.toLowerCase().replaceAll(" ", "");
   let clean2 = phrase2.toLowerCase().replaceAll(" ", "");
 
-  // 3. set up buckets
+  // set up buckets
   let seedBank = clean1.split(""); 
   let invalidBox = []; 
 
-  // 4. loop through the attempt to cross off letters
+  // loop through the attempt to cross off letters
   for (let i = 0; i < clean2.length; i++) {
     let currentLetter = clean2[i];
     let index = seedBank.indexOf(currentLetter);
@@ -28,7 +28,7 @@ runButton.addEventListener("click", function() {
     }
   }
 
-  // 5. figure out which of the 4 states occurred and print
+  // figure out which of the 4 states occurred and print
   let outputArea = document.getElementById("output-area");
   
   if (seedBank.length === 0 && invalidBox.length === 0) {
