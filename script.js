@@ -49,4 +49,3 @@ runButton.addEventListener("click", analyzeAnagram);
     outputArea.innerHTML = "<h3>> STATUS: CRITICAL MISMATCH</h3><p>Your attempt is missing Seed characters AND contains invalid characters.</p><p>Unused Seed characters: [ " + seedBank.join(", ") + " ]</p><p>Invalid characters to Remove: [ " + invalidBox.join(", ") + " ]</p>";
   }
   
-});
