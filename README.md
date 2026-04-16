@@ -1,4 +1,4 @@
-# ∞ The (In)voluntary Recombinator
+# ∞ The (In)voluntary Recombinator ∞
 
 > **[ACCESS THE LIVE TERMINAL HERE](https://involuntaryrecombinator.github.io/Anagram-Checker/)**
 
